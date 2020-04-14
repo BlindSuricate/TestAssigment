@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		CEEB7CB024460EDA00F5EE2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB7CAF24460EDA00F5EE2F /* AppDelegate.swift */; };
 		CEEB7CB224460EDA00F5EE2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB7CB124460EDA00F5EE2F /* SceneDelegate.swift */; };
-		CEEB7CB424460EDA00F5EE2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB7CB324460EDA00F5EE2F /* ViewController.swift */; };
 		CEEB7CB724460EDA00F5EE2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEB7CB524460EDA00F5EE2F /* Main.storyboard */; };
 		CEEB7CB924460EDC00F5EE2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEEB7CB824460EDC00F5EE2F /* Assets.xcassets */; };
 		CEEB7CBC24460EDC00F5EE2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEB7CBA24460EDC00F5EE2F /* LaunchScreen.storyboard */; };
+		CEEB7CC92446107300F5EE2F /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB7CC82446107300F5EE2F /* UsersListViewController.swift */; };
+		CEEB7CCB2446110F00F5EE2F /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB7CCA2446110F00F5EE2F /* UserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CEEB7CAC24460EDA00F5EE2F /* TestAssigment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAssigment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEB7CAF24460EDA00F5EE2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEEB7CB124460EDA00F5EE2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CEEB7CB324460EDA00F5EE2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CEEB7CB624460EDA00F5EE2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEEB7CB824460EDC00F5EE2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEEB7CBB24460EDC00F5EE2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEEB7CBD24460EDC00F5EE2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEEB7CC82446107300F5EE2F /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
+		CEEB7CCA2446110F00F5EE2F /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		CEEB7CAE24460EDA00F5EE2F /* TestAssigment */ = {
 			isa = PBXGroup;
 			children = (
-				CEEB7CAF24460EDA00F5EE2F /* AppDelegate.swift */,
-				CEEB7CB124460EDA00F5EE2F /* SceneDelegate.swift */,
-				CEEB7CB324460EDA00F5EE2F /* ViewController.swift */,
-				CEEB7CB524460EDA00F5EE2F /* Main.storyboard */,
-				CEEB7CB824460EDC00F5EE2F /* Assets.xcassets */,
-				CEEB7CBA24460EDC00F5EE2F /* LaunchScreen.storyboard */,
-				CEEB7CBD24460EDC00F5EE2F /* Info.plist */,
+				CEEB7CC724460F5300F5EE2F /* Network */,
+				CEEB7CC624460F4B00F5EE2F /* SupportFiles */,
+				CEEB7CC524460F4200F5EE2F /* Controller */,
+				CEEB7CC424460F3C00F5EE2F /* View */,
+				CEEB7CC324460F3400F5EE2F /* Model */,
 			);
 			path = TestAssigment;
+			sourceTree = "<group>";
+		};
+		CEEB7CC324460F3400F5EE2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEEB7CAF24460EDA00F5EE2F /* AppDelegate.swift */,
+				CEEB7CB124460EDA00F5EE2F /* SceneDelegate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEEB7CC424460F3C00F5EE2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEEB7CBA24460EDC00F5EE2F /* LaunchScreen.storyboard */,
+				CEEB7CB524460EDA00F5EE2F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEEB7CC524460F4200F5EE2F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEEB7CC82446107300F5EE2F /* UsersListViewController.swift */,
+				CEEB7CCA2446110F00F5EE2F /* UserInfoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEEB7CC624460F4B00F5EE2F /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CEEB7CB824460EDC00F5EE2F /* Assets.xcassets */,
+				CEEB7CBD24460EDC00F5EE2F /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		CEEB7CC724460F5300F5EE2F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +181,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEEB7CB424460EDA00F5EE2F /* ViewController.swift in Sources */,
 				CEEB7CB024460EDA00F5EE2F /* AppDelegate.swift in Sources */,
+				CEEB7CCB2446110F00F5EE2F /* UserInfoViewController.swift in Sources */,
+				CEEB7CC92446107300F5EE2F /* UsersListViewController.swift in Sources */,
 				CEEB7CB224460EDA00F5EE2F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,7 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9K7WCDXH6U;
-				INFOPLIST_FILE = TestAssigment/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TestAssigment/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +338,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = TarasenkoSerhii.TestAssigment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,7 +348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9K7WCDXH6U;
-				INFOPLIST_FILE = TestAssigment/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TestAssigment/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +356,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = TarasenkoSerhii.TestAssigment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
