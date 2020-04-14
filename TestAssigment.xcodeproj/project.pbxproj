@@ -14,6 +14,9 @@
 		CEEB7CBC24460EDC00F5EE2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEB7CBA24460EDC00F5EE2F /* LaunchScreen.storyboard */; };
 		CEEB7CC92446107300F5EE2F /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB7CC82446107300F5EE2F /* UsersListViewController.swift */; };
 		CEEB7CCB2446110F00F5EE2F /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB7CCA2446110F00F5EE2F /* UserInfoViewController.swift */; };
+		CEEB7CCD2446125400F5EE2F /* NetworkUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB7CCC2446125400F5EE2F /* NetworkUserManager.swift */; };
+		CEEB7CD124461AED00F5EE2F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB7CD024461AED00F5EE2F /* User.swift */; };
+		CEEB7CD324461E5A00F5EE2F /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB7CD224461E5A00F5EE2F /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		CEEB7CBD24460EDC00F5EE2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEEB7CC82446107300F5EE2F /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
 		CEEB7CCA2446110F00F5EE2F /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		CEEB7CCC2446125400F5EE2F /* NetworkUserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUserManager.swift; sourceTree = "<group>"; };
+		CEEB7CD024461AED00F5EE2F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CEEB7CD224461E5A00F5EE2F /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,8 @@
 			children = (
 				CEEB7CAF24460EDA00F5EE2F /* AppDelegate.swift */,
 				CEEB7CB124460EDA00F5EE2F /* SceneDelegate.swift */,
+				CEEB7CD024461AED00F5EE2F /* User.swift */,
+				CEEB7CD224461E5A00F5EE2F /* UserData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,6 +114,7 @@
 		CEEB7CC724460F5300F5EE2F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				CEEB7CCC2446125400F5EE2F /* NetworkUserManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -183,8 +192,11 @@
 			files = (
 				CEEB7CB024460EDA00F5EE2F /* AppDelegate.swift in Sources */,
 				CEEB7CCB2446110F00F5EE2F /* UserInfoViewController.swift in Sources */,
+				CEEB7CD324461E5A00F5EE2F /* UserData.swift in Sources */,
+				CEEB7CCD2446125400F5EE2F /* NetworkUserManager.swift in Sources */,
 				CEEB7CC92446107300F5EE2F /* UsersListViewController.swift in Sources */,
 				CEEB7CB224460EDA00F5EE2F /* SceneDelegate.swift in Sources */,
+				CEEB7CD124461AED00F5EE2F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

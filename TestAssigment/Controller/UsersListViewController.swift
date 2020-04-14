@@ -9,15 +9,21 @@
 import UIKit
 
 class UsersListViewController: UITableViewController {
+    
+    var users:[User] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+       let networkUserManager = NetworkUserManager()
+        networkUserManager.fetchUser(completionHandler: {user in
+        
+            self.users.append(user)
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+            print(self.users[2])
+            
+        })
+        
     }
 
     // MARK: - Table view data source
