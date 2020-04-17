@@ -10,15 +10,18 @@ import Foundation
 
 struct NetworkUserManager {
     
-    func takeListOfUsers(howManyUsers: Int)-> [User]{
+    var onCompletion: (([User]) -> Void)?
+    
+    
+    
+    func takeListOfUsers(howManyUsers: Int){
         var usersList: [User] = []
         for _ in 1...howManyUsers {
             fetchUser(completionHandler: {user in
                 usersList.append(user)
-                print(usersList)
+                self.onCompletion!(usersList)
             })
         }
-        return usersList
     }
     
     func fetchUser (completionHandler: @escaping (User) -> Void ){

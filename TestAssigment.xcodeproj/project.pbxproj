@@ -17,6 +17,7 @@
 		CEEB7CCD2446125400F5EE2F /* NetworkUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB7CCC2446125400F5EE2F /* NetworkUserManager.swift */; };
 		CEEB7CD124461AED00F5EE2F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB7CD024461AED00F5EE2F /* User.swift */; };
 		CEEB7CD324461E5A00F5EE2F /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB7CD224461E5A00F5EE2F /* UserData.swift */; };
+		CEEB7CD524492E1400F5EE2F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB7CD424492E1400F5EE2F /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CEEB7CCC2446125400F5EE2F /* NetworkUserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUserManager.swift; sourceTree = "<group>"; };
 		CEEB7CD024461AED00F5EE2F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CEEB7CD224461E5A00F5EE2F /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		CEEB7CD424492E1400F5EE2F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				CEEB7CC82446107300F5EE2F /* UsersListViewController.swift */,
 				CEEB7CCA2446110F00F5EE2F /* UserInfoViewController.swift */,
+				CEEB7CD424492E1400F5EE2F /* CustomTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			files = (
 				CEEB7CB024460EDA00F5EE2F /* AppDelegate.swift in Sources */,
 				CEEB7CCB2446110F00F5EE2F /* UserInfoViewController.swift in Sources */,
+				CEEB7CD524492E1400F5EE2F /* CustomTableViewCell.swift in Sources */,
 				CEEB7CD324461E5A00F5EE2F /* UserData.swift in Sources */,
 				CEEB7CCD2446125400F5EE2F /* NetworkUserManager.swift in Sources */,
 				CEEB7CC92446107300F5EE2F /* UsersListViewController.swift in Sources */,
