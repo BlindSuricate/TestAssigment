@@ -10,22 +10,28 @@ import Foundation
 
 struct NetworkUserManager {
     
-    public func fetchUser (completionHandler: @escaping (User) -> Void ){
+    func takeListOfUsers(howManyUsers: Int)-> [User]{
+        var usersList: [User] = []
+        for _ in 1...howManyUsers {
+            fetchUser(completionHandler: {user in
+                usersList.append(user)
+                print(usersList)
+            })
+        }
+        return usersList
+    }
+    
+    func fetchUser (completionHandler: @escaping (User) -> Void ){
         let urlString = "https://randomuser.me/api/"
         guard let userUrl = URL(string: urlString) else { return }
         
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: userUrl) { (data, response, error) in
             if let data = data {
-//                let dataString = String(data: data, encoding: .utf8)
-//                print(dataString!)
                 if  let user = self.parseJSON(withData: data){
-                completionHandler(user)
+                    completionHandler(user)
+                }
             }
-                
-            }
-            
-            
         }
         task.resume()
         

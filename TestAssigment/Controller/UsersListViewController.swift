@@ -11,19 +11,15 @@ import UIKit
 class UsersListViewController: UITableViewController {
     
     var users:[User] = []
+    var numbersOfUsersInList = 20
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
        let networkUserManager = NetworkUserManager()
-        networkUserManager.fetchUser(completionHandler: {user in
         
-            self.users.append(user)
-
-            print(self.users[2])
-            
-        })
-        
+        self.users = networkUserManager.takeListOfUsers(howManyUsers: numbersOfUsersInList)
     }
 
     // MARK: - Table view data source
