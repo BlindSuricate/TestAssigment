@@ -18,5 +18,7 @@ class CustomTableViewCell: UITableViewCell {
     }
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userLastName: UILabel!
+    @IBOutlet weak var userPhoneNumber: UILabel!
+    
     
 }

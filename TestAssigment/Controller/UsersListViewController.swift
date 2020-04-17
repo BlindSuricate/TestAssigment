@@ -19,24 +19,30 @@ class UsersListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Loading users info..."
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.prefetchDataSource = self
         
-        DispatchQueue.main.async {
-            self.networkUserManager.onCompletion = {usersList in
-                self.users = usersList
-                //print(usersList)
-            }
-            self.networkUserManager.takeListOfUsers(howManyUsers: self.numbersOfUsersInList)
-            
-        }
+        makeListOfUsers()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.title = "Users"
             self.tableView.reloadData()
         }
         
         
         
+    }
+    
+    func makeListOfUsers() {
+        DispatchQueue.main.async {
+            self.networkUserManager.onCompletion = {usersList in
+                self.users = usersList
+            }
+            self.networkUserManager.takeListOfUsers(howManyUsers: self.numbersOfUsersInList)
+            
+        }
     }
     
     func fetchImage (fromUrl url: String) -> UIImage? {
@@ -51,8 +57,6 @@ class UsersListViewController: UIViewController {
  
     
 }
-
-extension UsersListViewController: UITableViewDelegate {}
 
 extension UsersListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,9 +73,29 @@ extension UsersListViewController: UITableViewDataSource {
         cell.userImage.image = fetchImage(fromUrl: user.image)
         cell.userName.text = user.firstName
         cell.userLastName.text = user.lastName
+        cell.userPhoneNumber.text = user.phoneNumber
+        if indexPath.row == self.users.count {
+            print("the end of list")
+        }
         return cell
-        
+ }
+    
+    
+}
+
+extension UsersListViewController: UITableViewDelegate {
+    
+}
+
+extension UsersListViewController: UITableViewDataSourcePrefetching {
+    
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+            
+      print("prefetching row of \(indexPaths)")
     }
-    
-    
+        
+    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+            
+      print("cancel prefetch row of \(indexPaths)")
+    }
 }

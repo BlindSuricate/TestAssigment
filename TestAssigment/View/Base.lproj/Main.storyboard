@@ -38,13 +38,19 @@
                                                     <rect key="frame" x="88" y="8" width="318" height="64"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4S4-Nw-q6k">
-                                                            <rect key="frame" x="0.0" y="0.0" width="318" height="32"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="318" height="21.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ej1-6U-XVb">
-                                                            <rect key="frame" x="0.0" y="32" width="318" height="32"/>
+                                                            <rect key="frame" x="0.0" y="21.5" width="318" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NJ-nT-3xO">
+                                                            <rect key="frame" x="0.0" y="42.5" width="318" height="21.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -68,6 +74,7 @@
                                             <outlet property="userImage" destination="cxi-9M-TQC" id="OFZ-Uu-XOQ"/>
                                             <outlet property="userLastName" destination="ej1-6U-XVb" id="bwF-Xu-ijX"/>
                                             <outlet property="userName" destination="4S4-Nw-q6k" id="Wy9-Lh-6GY"/>
+                                            <outlet property="userPhoneNumber" destination="0NJ-nT-3xO" id="qCf-BG-g1G"/>
                                             <segue destination="2Gh-gk-nBA" kind="show" id="hjf-FZ-Y7I"/>
                                         </connections>
                                     </tableViewCell>
@@ -83,7 +90,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gHg-i9-iAS"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1Db-wi-od8"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="1Db-wi-od8"/>
                     <connections>
                         <outlet property="tableView" destination="vpK-Dz-bxE" id="hyH-S8-hUy"/>
                     </connections>
@@ -102,7 +109,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="BST-eH-vnu"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6Te-Ub-qVd"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="6Te-Ub-qVd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3da-0z-UgH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -113,8 +120,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xgu-G2-OGf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KAg-EC-Jlw">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="KAg-EC-Jlw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
