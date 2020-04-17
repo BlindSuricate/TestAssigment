@@ -22,7 +22,7 @@ class UsersListViewController: UIViewController {
         title = "Loading users info..."
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.prefetchDataSource = self
+        //tableView.prefetchDataSource = self
         
         makeListOfUsers()
         
@@ -84,18 +84,38 @@ extension UsersListViewController: UITableViewDataSource {
 }
 
 extension UsersListViewController: UITableViewDelegate {
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showInfo" {
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            guard let destination = segue.destination as? UserInfoViewController else { return }
+            
+            let user = users[indexPath.row]
+            let userImage = fetchImage(fromUrl: user.image)
+            let userName = user.firstName
+            let userLastName = user.lastName
+            let userGender = user.gender
+            let userDOB = user.dateOfBirth
+            let userPhoneNumber = user.phoneNumber
+            destination.image = userImage!
+            destination.firstName = userName
+            destination.lastName = userLastName
+            destination.gender = userGender
+            destination.dateOfBirth = userDOB
+            destination.phoneNumber = userPhoneNumber
+            
+        }
+    }
 }
 
-extension UsersListViewController: UITableViewDataSourcePrefetching {
-    
-    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-            
-      print("prefetching row of \(indexPaths)")
-    }
-        
-    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
-            
-      print("cancel prefetch row of \(indexPaths)")
-    }
-}
+//extension UsersListViewController: UITableViewDataSourcePrefetching {
+//
+//    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+//
+//      print("prefetching row of \(indexPaths)")
+//    }
+//
+//    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+//
+//      print("cancel prefetch row of \(indexPaths)")
+//    }
+//}

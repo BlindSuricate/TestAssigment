@@ -18,6 +18,7 @@
 		CEEB7CD124461AED00F5EE2F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB7CD024461AED00F5EE2F /* User.swift */; };
 		CEEB7CD324461E5A00F5EE2F /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB7CD224461E5A00F5EE2F /* UserData.swift */; };
 		CEEB7CD524492E1400F5EE2F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB7CD424492E1400F5EE2F /* CustomTableViewCell.swift */; };
+		CEEB7CD82449F65900F5EE2F /* DateFormator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB7CD72449F65900F5EE2F /* DateFormator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		CEEB7CD024461AED00F5EE2F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CEEB7CD224461E5A00F5EE2F /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		CEEB7CD424492E1400F5EE2F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		CEEB7CD72449F65900F5EE2F /* DateFormator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		CEEB7CAE24460EDA00F5EE2F /* TestAssigment */ = {
 			isa = PBXGroup;
 			children = (
+				CEEB7CD62449F62E00F5EE2F /* Extensions */,
 				CEEB7CC724460F5300F5EE2F /* Network */,
 				CEEB7CC624460F4B00F5EE2F /* SupportFiles */,
 				CEEB7CC524460F4200F5EE2F /* Controller */,
@@ -120,6 +123,14 @@
 				CEEB7CCC2446125400F5EE2F /* NetworkUserManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		CEEB7CD62449F62E00F5EE2F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CEEB7CD72449F65900F5EE2F /* DateFormator.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 				CEEB7CCD2446125400F5EE2F /* NetworkUserManager.swift in Sources */,
 				CEEB7CC92446107300F5EE2F /* UsersListViewController.swift in Sources */,
 				CEEB7CB224460EDA00F5EE2F /* SceneDelegate.swift in Sources */,
+				CEEB7CD82449F65900F5EE2F /* DateFormator.swift in Sources */,
 				CEEB7CD124461AED00F5EE2F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
